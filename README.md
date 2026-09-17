@@ -73,6 +73,21 @@ The anomaly detection methods used are:
 
 The final consensus identifies observations that are detected as anomalous by all three methods.
 
+## Environment / Dependencies
+
+The notebooks were executed in Google Colab using the following software environment:
+
+- Python 3.13.15
+- NumPy 2.1.3
+- pandas 2.2.3
+- scikit-learn 1.6.1
+- TensorFlow 2.20.0
+- Matplotlib 3.10.0
+- SciPy 1.16.3
+- PyArrow 23.0.1
+
+Package versions are reported to support reproducibility of the implemented analysis.
+
 ## Reproducibility
 
 The notebooks are designed to be executed sequentially in Google Colab:
