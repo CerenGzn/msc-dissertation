@@ -1,8 +1,14 @@
-# MSc Dissertation – Lithium-Ion Battery Anomaly Detection
+# MSc Dissertation – Explainable Unsupervised Anomaly Detection for Cell-Level Maintenance Prioritisation
 
-This repository contains the implementation developed for my MSc dissertation.
+This repository contains the implementation developed for my MSc dissertation on explainable unsupervised anomaly detection for cell-level maintenance prioritisation in lithium-ion battery packs. The analysis uses Isolation Forest, One-Class SVM and an Autoencoder across three nested feature representations. Strict model agreement, repeated-cycle persistence and cross-experiment aggregation are used to derive cell-level maintenance priorities. These priorities represent statistical inspection signals rather than confirmed physical faults.
 
-The project focuses on unsupervised anomaly detection for lithium ion battery cell data. Three different feature groups are evaluated using Isolation Forest, One Class SVM and an Autoencoder. The final analysis also compares model agreement and identifies cells that may deserve further inspection.
+## Dataset
+
+The analysis uses the publicly available lithium-ion battery cycling dataset described by de la Vega Hernández, Ortega-Redondo and Riba (2025):
+
+de la Vega Hernández, J., Ortega-Redondo, J.A. and Riba, J.-R. (2025), "Lithium-Ion Battery Pack Cycling Dataset with CC-CV Charging and WLTP/Constant Discharge Profiles", Scientific Data, 12, 1942.
+
+DOI: https://doi.org/10.1038/s41597-025-06229-5
 
 ## Repository Structure
 
@@ -66,6 +72,16 @@ The anomaly detection methods used are:
 - Autoencoder
 
 The final consensus identifies observations that are detected as anomalous by all three methods.
+
+## Reproducibility
+
+The notebooks are designed to be executed sequentially in Google Colab:
+
+`01_data_preparation_and_eda.ipynb`
+→ `02_anomaly_detection_experiments.ipynb`
+→ `03_evaluation_and_maintenance_priority.ipynb`
+
+The first two notebooks generate intermediate `.pkl` files that are used by the following stages. Random seeds are fixed where supported by the implemented methods. The analysis is retrospective and unsupervised; the models are fitted and evaluated on the prepared unlabelled population rather than on a separate labelled test set.
 
 ## Author
 
