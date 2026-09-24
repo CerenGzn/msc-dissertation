@@ -1,4 +1,4 @@
-# MSc Dissertation: Explainable Unsupervised Anomaly Detection for Cell-Level Maintenance Prioritisation
+# MSc Dissertation: Explainable Unsupervised Anomaly Detection for Cell-Level Maintenance Prioritisation in Lithium-Ion Battery Packs: Repair-Oriented Maintenance and Carbon-Reduction Potential
 
 This repository contains the implementation developed for my MSc dissertation on explainable unsupervised anomaly detection for cell-level maintenance prioritisation in lithium-ion battery packs. The analysis uses Isolation Forest, One-Class SVM and an Autoencoder across three nested feature representations. Strict model agreement, repeated-cycle persistence and cross-experiment aggregation are used to derive cell-level maintenance priorities. These priorities represent statistical inspection signals rather than confirmed physical faults.
 
